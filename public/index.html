@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>P2P File Transfer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>P2P File Transfer</h1>
+        <input type="text" id="session-id" placeholder="Enter Session ID">
+        <button id="join-btn">Join Session</button>
+        <div id="sender-section">
+            <input type="file" id="file-input">
+            <button id="send-btn">Send File</button>
+            <progress id="send-progress" value="0" max="100"></progress>
+        </div>
+        <div id="receiver-section" style="display: none;">
+            <p>Waiting for file...</p>
+            <progress id="receive-progress" value="0" max="100"></progress>
+            <a id="download-link" style="display: none;">Download File</a>
+        </div>
+        <p id="status"></p>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
